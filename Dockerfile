@@ -1,5 +1,9 @@
-FROM sameersbn/ubuntu:12.04.20140628
+FROM ubuntu:trusty
 MAINTAINER sameer@damagehead.com
+
+RUN apt-get update
+
+RUN apt-get install -y software-properties-common
 
 RUN add-apt-repository -y ppa:git-core/ppa && \
 		add-apt-repository -y ppa:brightbox/ruby-ng && \
